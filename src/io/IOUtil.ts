@@ -8,7 +8,7 @@ export class IOUtil {
     return dataStr.split('\n');
   }
 
-  static trimChars(s, c): string {
+  static trimChars(s:string, c:string): string {
     if (c === "]") c = "\\]";
     if (c === "\\") c = "\\\\";
     return s.replace(new RegExp(

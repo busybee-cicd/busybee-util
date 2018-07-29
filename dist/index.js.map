@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":";;AAAA,sCAAqC;AAE5B,iBAFA,eAAM,CAEA","sourcesContent":["import { IOUtil } from './io/IOUtil';\n\nexport { IOUtil };"]}
