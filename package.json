@@ -1,0 +1,29 @@
+{
+  "name": "busybee-util",
+  "version": "1.0.0",
+  "description": "common utility package",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^10.0.5",
+    "npm-watch": "^0.3.0",
+    "typescript": "^2.5.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "npm-watch build"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "ts",
+      "quiet": false
+    }
+  },
+  "author": "Simon Townsend",
+  "license": "ISC"
+}
