@@ -1,4 +1,5 @@
 import * as _ from 'lodash';
+import { LoggerConf } from './LoggerConf';
 
 export class Logger {
 
@@ -13,9 +14,9 @@ export class Logger {
   private logLevel: string;
   private levelMap: any;
   private writeCb: (msg:string)=>void;
-
-  constructor(conf: any, clazz:any) {
-    this.conf = _.cloneDeep(conf);
+  
+  constructor(conf: LoggerConf, clazz:any) {
+    this.conf = LoggerConf.clone(conf);
     this.className = clazz.constructor.name;
     this.logLevel = conf.logLevel || Logger.INFO;
     this.logLevel = this.logLevel.toUpperCase();
@@ -37,27 +38,27 @@ export class Logger {
     return this.levelMap[level] >= this.levelMap[this.logLevel];
   }
 
-  debug(message:string, pretty = false) {
+  debug(message:string|any, pretty = false) {
     this.write(Logger.DEBUG, message, pretty);
   }
 
-  info(message:string, pretty = false) {
+  info(message:string|any, pretty = false) {
     this.write(Logger.INFO, message, pretty);
   }
 
-  warn(message:string, pretty = false) {
+  warn(message:string|any, pretty = false) {
     this.write(Logger.WARN, message, pretty);
   }
 
-  error(message:string, pretty = false) {
+  error(message:string|any, pretty = false) {
     this.write(Logger.ERROR, message, pretty);
   }
 
-  trace(message:string, pretty = false) {
+  trace(message:string|any, pretty = false) {
     this.write(Logger.TRACE, message, pretty);
   }
 
-  private write(level:string, message:string, pretty:boolean) {
+  private write(level:string, message:string|any, pretty:boolean) {
     if (!this.passesLevel(level)) {
       return;
     }

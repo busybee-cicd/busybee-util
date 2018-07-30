@@ -1,3 +1,4 @@
+import { LoggerConf } from './LoggerConf';
 export declare class Logger {
     static readonly TRACE: string;
     static readonly DEBUG: string;
@@ -10,13 +11,13 @@ export declare class Logger {
     private logLevel;
     private levelMap;
     private writeCb;
-    constructor(conf: any, clazz: any);
+    constructor(conf: LoggerConf, clazz: any);
     static isLogLevel(val: string): boolean;
     passesLevel(level: string): boolean;
-    debug(message: string, pretty?: boolean): void;
-    info(message: string, pretty?: boolean): void;
-    warn(message: string, pretty?: boolean): void;
-    error(message: string, pretty?: boolean): void;
-    trace(message: string, pretty?: boolean): void;
+    debug(message: string | any, pretty?: boolean): void;
+    info(message: string | any, pretty?: boolean): void;
+    warn(message: string | any, pretty?: boolean): void;
+    error(message: string | any, pretty?: boolean): void;
+    trace(message: string | any, pretty?: boolean): void;
     private write;
 }
