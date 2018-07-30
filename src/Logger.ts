@@ -13,7 +13,7 @@ export class Logger {
   private className: string;
   private logLevel: string;
   private levelMap: any;
-  private writeCb: (msg:string)=>void;
+  private writeCb: (msg:string)=>void | null | undefined;
   
   constructor(conf: LoggerConf) {
     this.conf = LoggerConf.clone(conf);
@@ -27,7 +27,7 @@ export class Logger {
       'WARN': 3,
       'ERROR': 4
     };
-    this.writeCb = conf.writeCb || console.log;
+    this.writeCb = conf.writeCb ? conf.writeCb : console.log;
   }
 
   static isLogLevel(val:string) {

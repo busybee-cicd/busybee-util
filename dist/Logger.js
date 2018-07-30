@@ -15,7 +15,7 @@ var Logger = /** @class */ (function () {
             'WARN': 3,
             'ERROR': 4
         };
-        this.writeCb = conf.writeCb || console.log;
+        this.writeCb = conf.writeCb ? conf.writeCb : console.log;
     }
     Logger.isLogLevel = function (val) {
         return Logger.validLevels.indexOf(val.toUpperCase()) !== -1 ? true : false;
