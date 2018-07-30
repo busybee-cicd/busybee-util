@@ -13,7 +13,7 @@ export class Logger {
   private className: string;
   private logLevel: string;
   private levelMap: any;
-  private writeCb: (msg:string)=>void | null | undefined;
+  private writeCb: (msg:string)=>void;
   
   constructor(conf: LoggerConf) {
     this.conf = LoggerConf.clone(conf);
