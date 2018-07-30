@@ -11,7 +11,7 @@ export declare class Logger {
     private logLevel;
     private levelMap;
     private writeCb;
-    constructor(conf: LoggerConf, clazz: any);
+    constructor(conf: LoggerConf);
     static isLogLevel(val: string): boolean;
     passesLevel(level: string): boolean;
     debug(message: string | any, pretty?: boolean): void;
