@@ -1,7 +1,7 @@
 export declare class LoggerConf {
-    logLevel: string;
-    writeCb: (msg: string) => {};
     clazz: any;
-    constructor(logLevel: string, clazz: any, writeCb: (msg: string) => {});
+    logLevel: string | null | undefined;
+    writeCb: (msg: string) => {} | null | undefined;
+    constructor(clazz: any, logLevel: string | null | undefined, writeCb: (msg: string) => {} | null | undefined);
     static clone(conf: LoggerConf): LoggerConf;
 }

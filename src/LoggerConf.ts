@@ -1,15 +1,15 @@
 export class LoggerConf {
-  logLevel:string;
-  writeCb: (msg:string) => {};
   clazz: any;
+  logLevel:string | null | undefined;
+  writeCb: (msg:string) => {} | null | undefined;
   
-  constructor(logLevel:string, clazz:any, writeCb: (msg:string) => {}) {
-    this.logLevel = logLevel;
+  constructor(clazz:any, logLevel:string | null | undefined, writeCb: (msg:string) => {} | null | undefined) {
     this.clazz = clazz;
+    this.logLevel = logLevel;
     this.writeCb = writeCb;
   }
   
   static clone(conf:LoggerConf) {
-    return new LoggerConf(conf.logLevel, conf.clazz, conf.writeCb);
+    return new LoggerConf(conf.clazz, conf.logLevel, conf.writeCb);
   }
 }
