@@ -48,11 +48,16 @@ var Logger = /** @class */ (function () {
             return;
         }
         if (_.isObject(message)) {
-            if (pretty) {
-                message = JSON.stringify(message, null, '\t');
+            try {
+                if (pretty) {
+                    message = JSON.stringify(message, null, '\t');
+                }
+                else {
+                    message = JSON.stringify(message);
+                }
             }
-            else {
-                message = JSON.stringify(message);
+            catch (e) {
+                message = 'Unable to stringify the logged object. It is likely is a circular';
             }
             if (this.logLevel === Logger.DEBUG || this.logLevel === Logger.TRACE) {
                 level = level + ":" + this.className + ":";
