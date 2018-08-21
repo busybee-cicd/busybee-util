@@ -1,9 +1,9 @@
 export class LoggerConf {
   clazz: any;
   logLevel:string | null | undefined;
-  writeCb: (msg:string) => void | null | undefined;
+  writeCb: ((msg:string) => void) | null | undefined;
   
-  constructor(clazz:any, logLevel:string | null | undefined, writeCb: (msg:string) => void | null | undefined) {
+  constructor(clazz:any, logLevel:string | null | undefined, writeCb: ((msg:string) => void) | null | undefined) {
     this.clazz = clazz;
     this.logLevel = logLevel;
     this.writeCb = writeCb;
