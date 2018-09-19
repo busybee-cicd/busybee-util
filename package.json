@@ -1,6 +1,6 @@
 {
   "name": "busybee-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "common utility package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,6 +26,5 @@
       "quiet": false
     }
   },
-  "author": "Simon Townsend",
-  "license": "ISC"
+  "author": "Simon Townsend"
 }
