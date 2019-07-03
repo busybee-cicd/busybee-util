@@ -26,8 +26,5 @@
       "quiet": false
     }
   },
-  "author": "Simon Townsend",
-  "publishConfig": {
-    "registry": "https://devcloud.swcoe.ge.com/artifactory/api/npm/OAMFZ/"
-  }
+  "author": "Simon Townsend"
 }
