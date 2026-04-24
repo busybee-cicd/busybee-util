@@ -1,12 +1,15 @@
 {
   "name": "busybee-util",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "common utility package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "engines": {
     "node": ">=24"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "lodash": "^4.18.0"
   },
