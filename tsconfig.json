@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "lib": ["es6"],
+    "lib": ["es2022"],
     "outDir": "./dist",
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "rootDir": "./src",
+    "target": "es2022",
+    "module": "node16",
+    "moduleResolution": "node16",
     "types" : ["node"],
     "strict": true,
     "declaration": true
