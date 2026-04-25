@@ -32,5 +32,6 @@
       "quiet": false
     }
   },
-  "author": "Simon Townsend"
+  "author": "Simon Townsend",
+  "license": "MIT"
 }
